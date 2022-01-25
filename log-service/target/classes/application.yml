@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: log-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.107.72.125:8848
+    datasource:
+      url: jdbc:mysql://rm-bp1w078w62ze091jlvo.mysql.rds.aliyuncs.com:3306/weblog?serverTimezone=GMT%2B8
+      username: wenhx
+      password: Aa991314
+      driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8082
+
+mybatis:
+  mapper-locatino: classpath:/mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+feign:
+  client:
+    config:
+      default:
+        LoggerLevel: FULL
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
