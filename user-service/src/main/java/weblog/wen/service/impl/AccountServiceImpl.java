@@ -10,5 +10,6 @@ import weblog.wen.service.AccountService;
  */
 
 @Service
-public class AccountServiceImpl implements AccountService {
+public class AccountServiceImpl implements AccountService{
+
 }

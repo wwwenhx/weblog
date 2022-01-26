@@ -13,6 +13,7 @@
         <module>log-service</module>
         <module>feign-api</module>
         <module>gateway</module>
+        <module>utils</module>
     </modules>
 
     <parent>
@@ -83,6 +84,17 @@
                 <version>2.2.1.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>0.9.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>3.4.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
