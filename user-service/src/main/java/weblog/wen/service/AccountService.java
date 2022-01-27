@@ -1,6 +1,7 @@
 package weblog.wen.service;
 
-import org.springframework.stereotype.Service;
+import weblog.wen.entity.ServerResult;
+import weblog.wen.entity.User;
 
 /**
  * @author wenhx
@@ -9,4 +10,6 @@ import org.springframework.stereotype.Service;
  */
 
 public interface AccountService {
+
+    public ServerResult queryAccount(User user);
 }

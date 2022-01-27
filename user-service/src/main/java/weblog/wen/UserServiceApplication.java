@@ -1,5 +1,6 @@
 package weblog.wen;
 
+
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +13,7 @@ import org.springframework.cloud.openfeign.FeignClientsConfiguration;
  * @Description
  */
 @SpringBootApplication
-@EnableFeignClients(basePackages = "feign.api.clients", defaultConfiguration = FeignClientsConfiguration.class)
+@EnableFeignClients(basePackages = "weblog.wen.clients", defaultConfiguration = FeignClientsConfiguration.class)
 @MapperScan("weblog.wen.mapper")
 public class UserServiceApplication {
 

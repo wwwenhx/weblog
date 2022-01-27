@@ -1,11 +1,13 @@
 package weblog.wen.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import weblog.wen.entity.ServerResult;
 import weblog.wen.entity.User;
+import weblog.wen.service.AccountService;
 import weblog.wen.utils.JwtUtils;
 
 import java.util.Map;
@@ -20,11 +22,15 @@ import java.util.Map;
 @RequestMapping("/userService")
 public class UserController {
 
+    @Autowired
+    private AccountService accountService;
+
     @RequestMapping("/login")
     public ServerResult Login(@RequestBody Map<String, Object> param){
         User user = new User();
-        ServerResult serverResult = ServerResult.defaultSuccess(user);
-        return serverResult;
+        user.setName(param.get("name").toString());
+        user.setPassword(param.get("password").toString());
+        return accountService.queryAccount(user);
     }
 
     @RequestMapping("/checkToken")

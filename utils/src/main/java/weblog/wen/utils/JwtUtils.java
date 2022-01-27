@@ -15,7 +15,7 @@ import java.util.UUID;
 
 public class JwtUtils {
 
-    private static final String secretKey = "wen";
+    private static final String secretKey = "wwwenhx";
 
     private static long time = 1000*60*60*24;
 

@@ -1,6 +1,8 @@
 package weblog.wen.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.mybatis.spring.annotation.MapperScan;
+import weblog.wen.entity.User;
 
 /**
  * @author wenhx
@@ -9,4 +11,5 @@ import org.mybatis.spring.annotation.MapperScan;
  */
 
 public interface AccountMapper {
+    public User queryAccount(User user);
 }
